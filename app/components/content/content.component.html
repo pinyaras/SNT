@@ -1,0 +1,29 @@
+<div class="row">
+
+    <div class="carousel">
+
+      <div class="caption">
+        <h4>{{courselHeader}}</h4>
+        <p>{{ListingName}}</p>
+        <div>
+          <img src="../img/carousel/img1.png" alt="..." class="img-circle">
+        </div>
+      <!--  <p>{{ListingDetails}}{{ListingDetails}}{{ListingDetails}}</p> -->
+        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+      </div>
+    </div>
+
+        <div *ngFor="#service of services">
+          <div class="media">
+              <div class="media-left media-middle">
+                <a href="#">
+                    <span class='icon'><i class="fa fa-fw fa-4x {{service.icon}}" aria-hidden="true"></i></span>
+                </a>
+              </div>
+            <div class="media-body">
+              <h4 class="media-heading">{{service.title}}</h4>
+              <p>#### neaer this listing</p>
+            </div>
+          </div>
+        </div>
+</div>
