@@ -1,0 +1,138 @@
+
+.carousel {
+  background-image: url("../img/carousel/BG.png");
+  width: auto;;
+  height: auto;
+
+background-repeat: repeat repeat;
+}
+.caption div:first-child {
+font-family: Lato;
+color:  #ffffff;
+font-size: 18px;/* Approximation due to font substitution */
+font-weight: 900;
+line-height: 46px;/* Approximation due to font substitution */
+text-align: center
+}
+
+.caption{
+  padding-top: 19px;
+
+}
+
+
+  .prev {
+    color: #fff;
+    font-size: 36px;
+    margin-top: 50px;
+    padding-top: 20px;
+    float: left;
+    height: 80px;
+    width: 40px;
+    border-radius: 0 80px 80px 0;
+    -moz-border-radius: 80px 80px 0 0;
+    -webkit-border-radius: 0 80px 80px 0;
+    background-color: #000;
+    text-align: center;
+    align-items: flex-start;
+    cursor: pointer;
+    -webkit-user-select: none;
+
+
+  }
+
+  .next{
+color: #fff;
+font-size: 36px;
+margin-top: 50px;
+padding-top: 20px;
+float: right;
+height: 80px;
+width: 40px;
+border-radius: 80px 0 0 80px;
+-moz-border-radius: 80px 80px 0 0;
+-webkit-border-radius: 80px 0 0 80px;
+background: #000;
+text-align: center;
+align-item: flex-end;
+cursor: pointer;
+-webkit-user-select: none;
+  }
+
+.carousel {
+font-family: FontAwesome;
+color: #44b244;
+font-size: 16px; /* Approximation due to font substitution */
+font-weight: 400;
+line-height: 46px; /* Approximation due to font substitution */
+text-align: center;
+font-family: 'Myriad Pro';
+color: #ffffff;
+font-size: 16px;
+font-weight: 400;
+line-height: 46px;
+text-align: center;
+font-family: Lato;
+color: #ffffff;
+font-size: 16px; /* Approximation due to font substitution */
+font-weight: 400;
+line-height: 46px; /* Approximation due to font substitution */
+}
+
+.media {
+  margin: 0;
+  border-bottom:1px solid #ccc;
+  border-left: 5px solid #e1e1e1;
+}
+
+
+.text-content{
+  display: inline-block;
+}
+
+.text1{
+  display: inline-block;
+}
+.icon-list{
+  background-color:  #f2f2f2;
+  width: 60px;
+  height: 60px;
+  display: inline-block;
+  text-align: center;
+  padding: 5px;
+}
+
+p{
+  margin:0px;
+}
+
+.see-all{
+  display: inline-block;
+  float: right;
+}
+
+
+.ac-lists-list-view {
+    font-family: 'Lato', sans-serif;
+    font-size: 22px;
+    font-weight: 900;
+    color: #cecece;
+    padding-top: 12px;
+    float:right;
+
+}
+
+
+
+a.btn.btn-list{
+  border-radius: 5px;
+  background-color:  #44b244;
+  width: 180px;
+  height: 35px;
+}
+span.icon1{
+background-color:  #f2f2f2;
+width: 70px;
+height: 70px;
+
+}

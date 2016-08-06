@@ -9,22 +9,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-//import {ROUTER_DIRECTIVES, Routes, Router} from '@angular/router';
-var NearbyComponent = (function () {
-    function NearbyComponent() {
-        this.services = [{ title: 'Restaurants', icon: 'fa-cutlery' }, { title: 'Grocerie Stores', icon: 'fa-shopping-cart' }, { title: 'Banks', icon: 'fa-usd' }];
-        this.header = 'Top Rated Amenities In and Around [Listing Name] ';
+var http_1 = require('@angular/http');
+require('rxjs/add/operator/map');
+var AmenitiesService = (function () {
+    function AmenitiesService(_http) {
+        this._http = _http;
+        this.state = 'kansas';
+        this.city = 'wichita';
     }
-    NearbyComponent = __decorate([
-        core_1.Component({
-            moduleId: module.id,
-            selector: 'nearby',
-            templateUrl: 'nearby.component.html',
-            styleUrls: ['nearby.component.css']
-        }), 
-        __metadata('design:paramtypes', [])
-    ], NearbyComponent);
-    return NearbyComponent;
+    AmenitiesService.prototype.getApi = function () {
+        return this._http.get('http://prod-joyfulhome-api.synapsys.us/location/amenitiesInLocation/' + this.state + this.city)
+            .map(function (res) { return res.json(); });
+    };
+    AmenitiesService = __decorate([
+        core_1.Injectable(), 
+        __metadata('design:paramtypes', [http_1.Http])
+    ], AmenitiesService);
+    return AmenitiesService;
 }());
-exports.NearbyComponent = NearbyComponent;
-//# sourceMappingURL=nearby.component.js.map
+exports.AmenitiesService = AmenitiesService;
+//# sourceMappingURL=amenities.services.js.map

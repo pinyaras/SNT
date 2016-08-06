@@ -1,0 +1,39 @@
+.nearby-button {
+
+  border-width: 1px;
+border-color: #44b224;
+border-style: solid;
+background-color: #44b244;
+width: 178px;
+height: 28px;
+
+font-family: FontAwesome;
+color:  #ffffff;
+font-size: 24px;/* Approximation due to font substitution */
+font-weight: 400;
+line-height: 28px;/* Approximation due to font substitution */
+text-align: center;
+
+margin-bottom: 10px;
+
+}
+
+.nearby {
+
+
+    width: 180px;
+    height: 180px;
+    background-color: #333333;
+    text-align: center;
+    margin-left:0px;
+    margin-bottom: 10px;
+    padding: 10px;
+  }
+
+  span.icon{
+    font-family: Lato;
+color:  #ffffff;
+font-size: 22px;/* Approximation due to font substitution */
+font-weight: 400;
+text-align: center;
+  }

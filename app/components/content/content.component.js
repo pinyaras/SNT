@@ -13,7 +13,7 @@ var core_1 = require('@angular/core');
 var ContentComponent = (function () {
     function ContentComponent() {
         //  private ListingDetails = [{est:'Establishment',addr:'Establishment address', Location:'location'}];
-        this.services = [{ title: 'Restaurants', icon: 'fa-cutlery' }, { title: 'Grocerie Stores', icon: 'fa-shopping-cart' }, { title: 'Banks', icon: 'fa-usd' }];
+        this.services = [{ title: 'Restaurants', icon: 'fa-cutlery' }, { title: 'Grocerie Stores', icon: 'fa-shopping-cart' }, { title: 'Banks', icon: 'fa-usd' }, { title: 'others', icon: 'fa-ellipsis-h' }];
         this.courselHeader = 'What’s the highest rated resturant in this area?';
         this.ListingName = 'Listing Name';
     }
@@ -22,6 +22,7 @@ var ContentComponent = (function () {
             moduleId: module.id,
             selector: 'content',
             templateUrl: 'content.component.html',
+            styleUrls: ['content.component.css']
         }), 
         __metadata('design:paramtypes', [])
     ], ContentComponent);

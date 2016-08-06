@@ -12,14 +12,17 @@ var core_1 = require('@angular/core');
 var header_component_1 = require('./components/header/header.component');
 var content_component_1 = require('./components/content/content.component');
 var nearby_component_1 = require('./components/nearby/nearby.component');
+var http_1 = require('@angular/http');
+var amenities_services_1 = require('./services/amenities.services');
 var AppComponent = (function () {
     function AppComponent() {
     }
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: "\n  <div class=\"container\">\n    <header></header>\n      <div class=\"col-md-8\">\n          <content></content>\n      </div>\n      <div class=\"col-md-4\">\n          <nearby></nearby>\n      </div>\n  </div>\n\n\n          ",
-            directives: [header_component_1.HeaderComponent, content_component_1.ContentComponent, nearby_component_1.NearbyComponent]
+            templateUrl: "app/app.component.html",
+            directives: [header_component_1.HeaderComponent, content_component_1.ContentComponent, nearby_component_1.NearbyComponent],
+            providers: [amenities_services_1.AmenitiesService, http_1.HTTP_PROVIDERS]
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);

@@ -5,14 +5,7 @@ import { Component } from '@angular/core';
   moduleId: module.id,
   selector: 'nearby',
   templateUrl: 'nearby.component.html',
-  styles: [`
-        .nearby {
-
-            background-image: url('img/nearby/BG.png');
-            width: 180px;
-            height: 180px;
-          }
-          `]
+  styleUrls:['nearby.component.css']
   //directives:[ROUTER_DIRECTIVES]
 })
 

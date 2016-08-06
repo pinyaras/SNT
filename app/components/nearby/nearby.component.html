@@ -1,10 +1,69 @@
-<div class='container1'>
+<div class='nearby-col'>
 
+  <div class="nearby-container">
+    <div class="nearby-button"><i class="fa fa-fw fa-angle-up "></i> </div>
+      <div *ngFor="#service of services">
+                  <div class='nearby'>
 
-<div *ngFor="#service of services">
-            <div class='nearby'>
+                  <span class='icon'>
+                    <i class="fa fa-fw fa-2x {{service.icon}}" aria-hidden="true"></i>
+                    <p>Nearby</p>
+                     Restaurants
+                  </span>
+                  </div>
+      </div>
+    <div class="nearby-button"><i class="fa fa-fw fa-angle-down"></i></div>
+  </div>
+</div>
 
-            <span class='icon'><i class="fa fa-fw fa-4x {{service.icon}}" aria-hidden="true"></i></span>
+<!--
+<div class="amen-tiles">
+
+            <tiles-component><div class="tilecontent">
+    <div class="flippy-tile-col">
+        <div class="tile-container">
+            <div class="tile-flipper-one">
+                <div class="tile-front-one">
+                    <i class="fa fa-cutlery"></i>
+                    <p>Nearby Restaurants</p>
+                </div>
+                <a class="tile-back-one" href="/amenities-lists-page/restaurant/ks/wichita">
+                    <span><i class="fa fa-cutlery"></i> Nearby Restaurants</span>
+                    <span></span>
+                    <span>Open Page <i class="fa fa-mail-forward"></i></span>
+                </a>
             </div>
         </div>
+        <div class="tile-container">
+            <div class="tile-flipper-two">
+                <div class="tile-front-one">
+                    <i class="fa fa-shopping-cart"></i>
+                    <p>Nearby Groceries</p>
+                </div>
+                <a class="tile-back-two" href="/amenities-lists-page/grocers/ks/wichita">
+                    <span><i class="fa fa-shopping-cart"></i> Nearby Groceries </span>
+                    <span></span>
+                    <span>Open Page <i class="fa fa-mail-forward"></i></span>
+                </a>
+            </div>
+        </div>
+        <div class="tile-container">
+            <div class="tile-flipper-three">
+                <div class="tile-front-one">
+                    <i class="fa fa-dollar"></i>
+                    <p>Nearby Banks</p>
+                </div>
+                <a class="tile-back-three" href="/amenities-lists-page/banks/ks/wichita">
+                    <span><i class="fa fa-dollar"></i> Nearby Banks</span>
+                    <span></span>
+                    <span>Open Page<i class="fa fa-mail-forward"></i></span>
+                </a>
+            </div>
+        </div>
+    </div>
 </div>
+</tiles-component>
+
+        </div>
+
+      -->
