@@ -9,19 +9,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var api_service_1 = require('../../services/api.service');
 require('rxjs/add/operator/map');
 //import {ROUTER_DIRECTIVES, Routes, Router} from '@angular/router';
 var HeaderComponent = (function () {
-    /*
-      constructor(private _amenitiesSerivce:AmenitiesService){
-        this._getapiService.getApi().subcribe(getApi => {
-          this.getApi = getApi;
-        })
-        this.header = 'Top Rated Amenities In and Around [Listing Name] ';
-      }
-    */
-    function HeaderComponent() {
-        this.header = 'Top Rated Amenities In and Around [Listing Name] ';
+    function HeaderComponent(_apiService) {
+        var _this = this;
+        this._apiService = _apiService;
+        this.getApi = new Array();
+        this.user = new Array();
+        this.repos = new Array();
+        this._apiService.getUser().subscribe(function (user) {
+            _this.user = user;
+        });
+        this.header = 'Top Rated Amenities In and Around ';
+        this._apiService.getRepos().subscribe(function (repos) {
+            _this.repos = repos;
+        });
     }
     HeaderComponent = __decorate([
         core_1.Component({
@@ -30,7 +34,7 @@ var HeaderComponent = (function () {
             templateUrl: 'header.component.html',
             styleUrls: ['header.component.css']
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [api_service_1.ApiService])
     ], HeaderComponent);
     return HeaderComponent;
 }());

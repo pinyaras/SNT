@@ -4,8 +4,8 @@ import {ContentComponent} from './components/content/content.component';
 import {NearbyComponent} from './components/nearby/nearby.component';
 
 import {HTTP_PROVIDERS} from '@angular/http';
-import {AmenitiesService} from'./services/amenities.services';
-
+//import {AmenitiesService} from'./services/amenities.services';
+import {ApiService} from'./services/api.service';
 
 
 @Component({
@@ -13,6 +13,6 @@ import {AmenitiesService} from'./services/amenities.services';
   templateUrl: `app/app.component.html`,
 
           directives: [HeaderComponent,ContentComponent,NearbyComponent],
-          providers: [AmenitiesService, HTTP_PROVIDERS]
+          providers: [ApiService, HTTP_PROVIDERS]
 })
 export class AppComponent { }

@@ -13,7 +13,8 @@ var header_component_1 = require('./components/header/header.component');
 var content_component_1 = require('./components/content/content.component');
 var nearby_component_1 = require('./components/nearby/nearby.component');
 var http_1 = require('@angular/http');
-var amenities_services_1 = require('./services/amenities.services');
+//import {AmenitiesService} from'./services/amenities.services';
+var api_service_1 = require('./services/api.service');
 var AppComponent = (function () {
     function AppComponent() {
     }
@@ -22,7 +23,7 @@ var AppComponent = (function () {
             selector: 'my-app',
             templateUrl: "app/app.component.html",
             directives: [header_component_1.HeaderComponent, content_component_1.ContentComponent, nearby_component_1.NearbyComponent],
-            providers: [amenities_services_1.AmenitiesService, http_1.HTTP_PROVIDERS]
+            providers: [api_service_1.ApiService, http_1.HTTP_PROVIDERS]
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);

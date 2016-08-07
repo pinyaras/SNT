@@ -11,21 +11,26 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var http_1 = require('@angular/http');
 require('rxjs/add/operator/map');
-var AmenitiesService = (function () {
-    function AmenitiesService(_http) {
+var ApiService = (function () {
+    function ApiService(_http) {
         this._http = _http;
+        this.username = 'nomadsix';
         this.state = 'ks';
         this.city = 'wichita';
     }
-    AmenitiesService.prototype.getApi = function () {
+    ApiService.prototype.getRepos = function () {
+        return this._http.get('https://api.github.com/users/' + this.username + '/repos')
+            .map(function (res) { return res.json(); });
+    };
+    ApiService.prototype.getUser = function () {
         return this._http.get('http://prod-joyfulhome-api.synapsys.us/location/amenitiesInLocation/' + this.state + '/' + this.city)
             .map(function (res) { return res.json(); });
     };
-    AmenitiesService = __decorate([
+    ApiService = __decorate([
         core_1.Injectable(), 
         __metadata('design:paramtypes', [http_1.Http])
-    ], AmenitiesService);
-    return AmenitiesService;
+    ], ApiService);
+    return ApiService;
 }());
-exports.AmenitiesService = AmenitiesService;
-//# sourceMappingURL=amenities.services.js.map
+exports.ApiService = ApiService;
+//# sourceMappingURL=api.service.js.map
