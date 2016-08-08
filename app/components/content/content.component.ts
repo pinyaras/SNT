@@ -15,19 +15,21 @@ export class ContentComponent {
   getApi:any = new Array();
   getBuss:any = new Array();
   location:any = new Array();
+  resName:any = new Array();
   private courselHeader:string;
   private ListingName:string;
   private getResTotal:any;
   private getGroTotal:any;
   private getBankTotal:any;
   private getImg:string;
+  //private resName;
   services;
 //  private ListingDetails = [{est:'Establishment',addr:'Establishment address', Location:'location'}];
   //private services = [{title:'Restaurants', icon:'fa-cutlery', total:this.getTotal},{title:'Grocerie Stores',icon:'fa-shopping-cart'},{title:'Banks',icon:'fa-usd'},{title:'others',icon:'fa-ellipsis-h'}];
     num = 0
 
-     Images = ["../img/carousel/img1.png",
-               "https://i.ytimg.com/vi/AAXRBx_30EE/hqdefault.jpg",this.getImg]
+    // Images = ["../img/carousel/img1.png",
+      //         "https://i.ytimg.com/vi/AAXRBx_30EE/hqdefault.jpg",this.getImg]
 
 
 
@@ -40,9 +42,13 @@ export class ContentComponent {
         this.getBankTotal=getApi.data.banks.total;
         this.getGroTotal=getApi.data.grocers.total;
         this.getResTotal=getApi.data.restaurant.total;
-        this.getBuss=getApi.data.restaurant.businesses[0];
+        this.getBuss=getApi.data.restaurant.businesses;
         this.getImg=this.getBuss.snippet_image_url;
         this.location= getApi.data.restaurant.businesses[0].location
+        this.resName = this.getBuss[0].name;
+        var imgSlide = document.getElementById("img-circle")
+        imgSlide.style.backgroundImage = "url("+this.getBuss[0].image_url+")"
+
 
       })
       this.services = [{title:'Restaurants', icon:'fa-cutlery', total: this.getResTotal},
@@ -60,20 +66,27 @@ export class ContentComponent {
 
 
   nextImg(){
-       var elImg = document.getElementById("img-circle")
-       elImg.style.backgroundImage = "url("+this.Images[this.num]+")"
-       console.log(this.Images[this.num])
+       var imgSlide = document.getElementById("img-circle")
+
        this.num += 1
-       if (this.num > this.Images.length - 1)
+        if (this.num > this.getBuss.length - 1)
            this.num = 0
+        this.location = this.getBuss[this.num].location
+        this.resName = this.getBuss[this.num].name
+        imgSlide.style.backgroundImage = "url("+this.getBuss[this.num].image_url+")"
+
    }
    prevImg(){
-        var elImg = document.getElementById("img-circle")
-        elImg.style.backgroundImage = "url("+this.Images[this.num]+")"
-        console.log(this.Images[this.num])
+        var imgSlide = document.getElementById("img-circle")
+      //imgSlide.style.backgroundImage = "url("+this.Images[this.num]+")"
+        //console.log(this.Images[this.num])
         this.num -= 1
         if (this.num < 0)
-            this.num = 1
-    }
+            this.num = this.getBuss.length - 1
+          this.location = this.getBuss[this.num].location
+          this.resName = this.getBuss[this.num].name
+          imgSlide.style.backgroundImage = "url("+this.getBuss[this.num].image_url+")"
+
+        }
 
 }

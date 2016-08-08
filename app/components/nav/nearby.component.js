@@ -9,23 +9,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var http_1 = require('@angular/http');
-require('rxjs/add/operator/map');
-var AmenitiesService = (function () {
-    function AmenitiesService(_http) {
-        this._http = _http;
-        this.state = 'ks';
-        this.city = 'wichita';
+//import {ROUTER_DIRECTIVES, Routes, Router} from '@angular/router';
+var NavComponent = (function () {
+    function NavComponent() {
+        this.header = 'Top Rated Amenities In and Around [Listing Name] ';
     }
-    AmenitiesService.prototype.getApi = function () {
-        return this._http.get('http://prod-joyfulhome-api.synapsys.us/location/amenitiesInLocation/' + this.state + '/' + this.city)
-            .map(function (res) { return res.json(); });
-    };
-    AmenitiesService = __decorate([
-        core_1.Injectable(), 
-        __metadata('design:paramtypes', [http_1.Http])
-    ], AmenitiesService);
-    return AmenitiesService;
+    NavComponent = __decorate([
+        core_1.Component({
+            moduleId: module.id,
+            selector: 'nav',
+            templateUrl: 'nav.component.html',
+        }), 
+        __metadata('design:paramtypes', [])
+    ], NavComponent);
+    return NavComponent;
 }());
-exports.AmenitiesService = AmenitiesService;
-//# sourceMappingURL=amenities.services.js.map
+exports.NavComponent = NavComponent;
+//# sourceMappingURL=nearby.component.js.map

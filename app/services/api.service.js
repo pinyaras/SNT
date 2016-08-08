@@ -12,18 +12,16 @@ var core_1 = require('@angular/core');
 var http_1 = require('@angular/http');
 require('rxjs/add/operator/map');
 var ApiService = (function () {
+    // Created a constructor for http
     function ApiService(_http) {
         this._http = _http;
-        this.username = 'nomadsix';
         this.state = 'ks';
         this.city = 'wichita';
+        this.apiUrl = 'http://prod-joyfulhome-api.synapsys.us/location/amenitiesInLocation/';
     }
-    ApiService.prototype.getRepos = function () {
-        return this._http.get('https://api.github.com/users/' + this.username + '/repos')
-            .map(function (res) { return res.json(); });
-    };
+    //Retreive an api object and save in getApi()
     ApiService.prototype.getApi = function () {
-        return this._http.get('http://prod-joyfulhome-api.synapsys.us/location/amenitiesInLocation/' + this.state + '/' + this.city)
+        return this._http.get(this.apiUrl + this.state + '/' + this.city)
             .map(function (res) { return res.json(); });
     };
     ApiService = __decorate([

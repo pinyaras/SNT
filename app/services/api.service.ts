@@ -4,23 +4,21 @@ import 'rxjs/add/operator/map';
 
 @Injectable()
 export class ApiService {
-  private username:string; // Github Username
-  private state:string; // Github Username
-  private city:string;
+
+  private state:string; // State
+  private city:string; //city
+  private apiUrl:string ; //Url of API
+  // Created a constructor for http
   constructor(private _http:Http){
-    this.username = 'nomadsix';
+
     this.state = 'ks';
     this.city = 'wichita';
+    this.apiUrl='http://prod-joyfulhome-api.synapsys.us/location/amenitiesInLocation/';
   }
 
-
-  getRepos(){
-    return this._http.get('https://api.github.com/users/'+this.username+'/repos')
-      .map(res => res.json());
-  }
-
+//Retreive an api object and save in getApi()
   getApi(){
-    return this._http.get('http://prod-joyfulhome-api.synapsys.us/location/amenitiesInLocation/'+this.state+'/'+ this.city)
+    return this._http.get(this.apiUrl+this.state+'/'+ this.city)
       .map(res => res.json());
   }
 

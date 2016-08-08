@@ -12,7 +12,7 @@ var core_1 = require('@angular/core');
 //import {ROUTER_DIRECTIVES, Routes, Router} from '@angular/router';
 var NearbyComponent = (function () {
     function NearbyComponent() {
-        this.services = [{ title: 'Restaurants', icon: 'fa-cutlery' }, { title: 'Grocerie Stores', icon: 'fa-shopping-cart' }, { title: 'Banks', icon: 'fa-usd' }];
+        this.services = [{ title: 'Restaurants', icon: 'fa-cutlery' }, { title: 'Groceries', icon: 'fa-shopping-cart' }, { title: 'Banks', icon: 'fa-usd' }];
         this.header = 'Top Rated Amenities In and Around [Listing Name] ';
     }
     NearbyComponent = __decorate([

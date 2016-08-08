@@ -3,15 +3,14 @@ import { Component } from '@angular/core';
 
 @Component({
   moduleId: module.id,
-  selector: 'nearby',
-  templateUrl: 'nearby.component.html',
-  styleUrls:['nearby.component.css']
+  selector: 'nav',
+  templateUrl: 'nav.component.html',
   //directives:[ROUTER_DIRECTIVES]
 })
 
-export class NearbyComponent {
+export class NavComponent {
   private header:string;
-  private services = [{title:'Restaurants', icon:'fa-cutlery'},{title:'Groceries',icon:'fa-shopping-cart'},{title:'Banks',icon:'fa-usd'}];
+
   constructor(){
     this.header = 'Top Rated Amenities In and Around [Listing Name] ';
   }

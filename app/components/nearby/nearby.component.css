@@ -33,15 +33,17 @@ margin-bottom: 10px;
     text-align: center;
     margin-left:0px;
     margin-bottom: 10px;
-    padding: 10px;
+    padding: 30px;
+    margin-top: 10px;
   }
 
-  span.icon{
+  .icon{
     font-family: Lato;
 color:  #ffffff;
 font-size: 22px;/* Approximation due to font substitution */
 font-weight: 400;
 text-align: center;
+
 
   }
 
