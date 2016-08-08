@@ -17,15 +17,12 @@ var HeaderComponent = (function () {
         var _this = this;
         this._apiService = _apiService;
         this.getApi = new Array();
-        this.user = new Array();
-        this.repos = new Array();
-        this._apiService.getUser().subscribe(function (user) {
-            _this.user = user;
+        this.addr = new Array();
+        this._apiService.getApi()
+            .subscribe(function (addr) {
+            _this.addr = addr.data.restaurant.businesses[0].location;
         });
-        this.header = 'Top Rated Amenities In and Around ';
-        this._apiService.getRepos().subscribe(function (repos) {
-            _this.repos = repos;
-        });
+        this.Header = 'Top Rated Amenities In and Around';
     }
     HeaderComponent = __decorate([
         core_1.Component({

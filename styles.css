@@ -1,3 +1,7 @@
 .section{
   padding: 0 1em;
 }
+
+p{
+  font-family: Lato, sans-serif;
+}

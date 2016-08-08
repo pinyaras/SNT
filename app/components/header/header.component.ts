@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {AmenitiesService} from'../../services/amenities.services';
+
 import {ApiService} from'../../services/api.service';
 import 'rxjs/add/operator/map';
 
@@ -16,20 +16,17 @@ import 'rxjs/add/operator/map';
 
 export class HeaderComponent {
   getApi:any = new Array();
-  user:any = new Array();
-  repos:any= new Array();
-  private header:string;
+  addr:any = new Array();
 
+  private Header:string;
   constructor(private _apiService:ApiService){
-    this._apiService.getUser().subscribe(user => {
-      this.user=user;
+    this._apiService.getApi()
+    .subscribe(
+      addr => {
+      this.addr=addr.data.restaurant.businesses[0].location;
     })
 
-    this.header = 'Top Rated Amenities In and Around ';
-
-    this._apiService.getRepos().subscribe(repos => {
-      this.repos= repos;
-      })
+    this.Header = 'Top Rated Amenities In and Around';
   }
 
 /*

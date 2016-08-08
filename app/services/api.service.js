@@ -22,7 +22,7 @@ var ApiService = (function () {
         return this._http.get('https://api.github.com/users/' + this.username + '/repos')
             .map(function (res) { return res.json(); });
     };
-    ApiService.prototype.getUser = function () {
+    ApiService.prototype.getApi = function () {
         return this._http.get('http://prod-joyfulhome-api.synapsys.us/location/amenitiesInLocation/' + this.state + '/' + this.city)
             .map(function (res) { return res.json(); });
     };

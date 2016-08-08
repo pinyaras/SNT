@@ -16,9 +16,32 @@ text-align: center
 }
 
 .caption{
-  padding-top: 19px;
+
 
 }
+
+m{
+  color:#44b244;
+}
+
+#cHeader{
+  font-family: Lato;
+  color:  #ffffff;
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 40px;
+  text-align: center;
+
+
+}
+#locationHeader{
+
+  font-size: 16px;
+  line-height: 26px;
+  margin-bottom: 10px;
+
+}
+
 
 
   #prev {
@@ -41,7 +64,7 @@ text-align: center
 
 
   }
-.next:hover{
+#next:hover,#prev:hover{
   background-color: green;
 }
   #next{
@@ -98,9 +121,20 @@ line-height: 46px; /* Approximation due to font substitution */
   border-left: 5px solid #e1e1e1;
 }
 
-
+#STL{
+  color: white;
+}
 .text-content{
   display: inline-block;
+}
+
+.text{
+  font-family: Lato;
+color:  #000000;
+font-size: 18px;/* Approximation due to font substitution */
+font-weight: 400;
+line-height: 18px;/* Approximation due to font substitution */
+text-align: left;
 }
 
 .text1{
@@ -108,11 +142,11 @@ line-height: 46px; /* Approximation due to font substitution */
 }
 .icon-list{
   background-color:  #f2f2f2;
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
   display: inline-block;
   text-align: center;
-  padding: 5px;
+  padding: 10px;
 }
 
 p{
@@ -135,17 +169,14 @@ p{
 
 }
 
-
+#SA:hover{
+  color:#44b224;
+}
 
 a.btn.btn-list{
   border-radius: 5px;
   background-color:  #44b244;
   width: 180px;
   height: 35px;
-}
-span.icon1{
-background-color:  #f2f2f2;
-width: 70px;
-height: 70px;
-
+  margin-bottom: 10px;
 }

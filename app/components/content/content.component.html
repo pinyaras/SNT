@@ -3,8 +3,8 @@
     <div class="carousel">
 
       <div class="caption">
-        <div>{{courselHeader}}</div>
-        <div> <p>{{ListingName}}</p> </div>
+      <p id="cHeader">{{courselHeader}} </p>
+      <p id="locationHeader"><m class="fa fa-map-marker"></m> {{location.city}}, {{location.state_code}} {{location.postal_code}}</p>
           <div>
                 <carousel-button>
                 <div (click)="prevImg()" id="prev" >
@@ -18,13 +18,13 @@
 
           </div>
           <div class="carousel-est">
-                <div>Public</div>
-                <div><span>129 N Rock Island, </span> <span>Wichita, KS 67202</span></div>
+                <div id="pb">{{getBuss.id}}</div>
+                <span>{{location.display_address}}</span>
           </div>
 
           <p><a href="/amenities-lists-page/restaurant/ks/wichita" class="btn btn-list" role="button">
             <span class="content-icon"><i class="fa fa-home" aria-hidden="true"></i></span>
-            <span>See The List</span>
+            <span id="STL">See The List</span>
             <i class="fa fa-angle-right"></i>
           </a></p>
 
@@ -42,12 +42,12 @@
 
                   <div class="text-content">
                     <p class="text"> {{service.title}}</p>
-                    <p class="text1">#### neaer this listing</p>
+                    <p class="text1">{{service.total}} neaer this listing</p>
                   </div>
               <div class="see-all">
                 <a class="ac-lists-list-view" href="/amenities-lists-page/restaurant/ks/wichita">
-                    <span>See All
-                    <i class="fa fa-angle-right"></i>
+                    <span id="SA">See All
+                    <w class="fa fa-angle-right"></w>
                     </span>
                 </a>
             </div>

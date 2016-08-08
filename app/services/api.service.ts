@@ -19,7 +19,7 @@ export class ApiService {
       .map(res => res.json());
   }
 
-  getUser(){
+  getApi(){
     return this._http.get('http://prod-joyfulhome-api.synapsys.us/location/amenitiesInLocation/'+this.state+'/'+ this.city)
       .map(res => res.json());
   }
